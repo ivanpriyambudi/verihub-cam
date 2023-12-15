@@ -15,13 +15,13 @@ function BtnFilter() {
         justify="center"
       >
         <Button
-          onClick={() => dispatch(setIndexShowAll('prev'))}
+          onClick={() => dispatch(setIndexShowAll("prev"))}
           size="large"
           type="primary"
           icon={<UpOutlined />}
         />
         <Button
-          onClick={() => dispatch(setIndexShowAll('next'))}
+          onClick={() => dispatch(setIndexShowAll("next"))}
           size="large"
           type="primary"
           icon={<DownOutlined />}

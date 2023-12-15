@@ -25,7 +25,12 @@ function BtnFilter() {
 
   return (
     <>
-      <Flex style={{width: '100%'}} gap="middle" align="center" justify="center">
+      <Flex
+        style={{ width: "100%" }}
+        gap="middle"
+        align="center"
+        justify="center"
+      >
         <Button
           onClick={() => changeArrow(false)}
           size="large"

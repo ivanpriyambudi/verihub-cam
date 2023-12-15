@@ -5,3 +5,135 @@ body {
 .c-pointer {
   cursor: pointer !important;
 }
+
+.c-webcam-frame {
+  height: calc(100vh - 64px);
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.c-panel {
+  position: absolute;
+  bottom: 10px;
+  width: 100%;
+}
+
+.c-relative {
+  position: relative;
+}
+
+.c-kaleidoscope {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.c-kaleidoscope .tile {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.c-kaleidoscope .tile-section:nth-child(1n) {
+  clip-path: polygon(0 0, 50% 0, 100% 100%, 0% 100%);
+  transform: scaleX(1.5);
+  transform-origin: left;
+}
+
+.c-kaleidoscope .tile-section:nth-child(1n) .tile:first-child {
+  clip-path: polygon(0 0, 0% 100%, 100% 100%);
+}
+
+.c-kaleidoscope .tile-section:nth-child(1n) .tile:last-child {
+  clip-path: polygon(0 0, 100% 0, 100% 100%);
+}
+
+.c-kaleidoscope .tile-section:nth-child(1n) .tile:first-child video {
+  transform: rotate(315deg);
+}
+
+.c-kaleidoscope .tile-section:nth-child(1n) .tile:last-child video {
+  transform: rotate(315deg) scaleX(-1);
+}
+
+
+
+
+
+
+.c-kaleidoscope .tile-section:nth-child(2n) {
+  clip-path: polygon(50% 100%, 0 0, 100% 0);
+  transform: scaleX(1.5);
+  transform-origin: center;
+}
+
+.c-kaleidoscope .tile-section:nth-child(2n) .tile:first-child {
+  clip-path: inset(0 0 0 50%);
+  align-items: flex-end;
+}
+
+.c-kaleidoscope .tile-section:nth-child(2n) .tile:last-child {
+  clip-path: inset(0 50% 0 0);
+  align-items: flex-end;
+}
+
+.c-kaleidoscope .tile-section:nth-child(2n) .tile:first-child video {
+  transform: rotate(0deg) scaleX(-1);
+}
+
+.c-kaleidoscope .tile-section:nth-child(2n) .tile:last-child video {
+  transform: rotate(0deg);
+}
+
+
+
+.c-kaleidoscope .tile-section:nth-child(3n) {
+  clip-path: polygon(50% 0, 100% 0, 100% 100%, 0% 100%);
+  transform: scaleX(1.5);
+  transform-origin: right;
+}
+
+.c-kaleidoscope .tile-section:nth-child(3n) .tile:first-child {
+  clip-path: polygon(100% 0, 0 100%, 100% 100%);
+}
+
+.c-kaleidoscope .tile-section:nth-child(3n) .tile:last-child {
+  clip-path: polygon(100% 0, 0 100%, 0 0);
+}
+
+.c-kaleidoscope .tile-section:nth-child(3n) .tile:first-child video {
+  transform: rotate(45deg) scaleX(-1);
+}
+
+.c-kaleidoscope .tile-section:nth-child(3n) .tile:last-child video {
+  transform: rotate(45deg);
+}
+
+
+/* .c-kaleidoscope .tile:nth-child(2n) {
+  transform: rotate(0deg);
+}
+
+.c-kaleidoscope .tile:nth-child(3n) {
+  transform: rotate(60deg);
+}
+
+.c-kaleidoscope .tile:nth-child(4n) {
+  transform: rotate(90deg);
+}
+
+.c-kaleidoscope .tile:nth-child(6n) {
+  transform: rotate(120deg);
+}
+
+.c-kaleidoscope .tile:nth-child(12n) {
+  transform: rotate(240deg);
+} */
